@@ -7,7 +7,8 @@ import java.util.regex.Pattern;
  * In this class we defined and checked the regex pattern.
  * We have used 2 class Pattern and Matcher for checking & matching the pattern
  * [1] We have created this method to check the regex pattern for the first name
- * 
+ * [2] We have created this method to check the regex pattern for the last name
+ * [3] Method to check the regex pattern for the emailId 
  * @author Tom
  *
  */
@@ -50,6 +51,23 @@ public class UserDetails {
             System.out.println("Valid Input");
         } else {
             System.out.println("Sorry!! InValid Input");
+        }
+    }
+    /**
+     *[3] We have created this method to check the regex pattern for the emailId
+     * 1 We are passing the email to this method
+     * 2. Then we define the regex pattern
+     * 3. E.g. abc.xyz@bl.co.in - Email has 3 mandatory parts (abc, bl & co) and 2 optional (xyz & in) with precise @ and . positions
+     * @param emailId - we have passed the email id to check the regex
+     */
+    public void emailId(String emailId) {
+        regex = "^[a-z0-9]+([_+-.][0-9a-z]+)*@[a-z]+.[a-z]{2,3}$";
+        Pattern pattern  = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(emailId);
+        if (matcher.matches()) {
+            System.out.println("Valid");
+        } else {
+            System.out.println("InValid");
         }
     }
 }

@@ -17,6 +17,7 @@ public class RegexUserMain {
         while (true) {
             System.out.println(" \n1 To Check First Name\n"
                     + "2 To Check Last Name\n"
+                    + "3 To Check EmailId\n"
                     + "0 To Exit");
             int choice = scanner.nextInt();
             switch (choice) {
@@ -25,6 +26,9 @@ public class RegexUserMain {
                     break;
                 case 2 :
                     regexUserRegistration.userLastName();
+                    break;
+                case 3 :
+                    regexUserRegistration.userEmailId();
                     break;
                 case 0:
                     System.exit(0);
