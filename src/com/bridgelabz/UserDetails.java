@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
  * [2] We have created this method to check the regex pattern for the last name
  * [3] Method to check the regex pattern for the emailId 
  * [4] Method to check the regex pattern for the mobile number format
+ * [5] Method to check the regex pattern for the password
  * @author Tom
  *
  */
@@ -88,4 +89,22 @@ public class UserDetails {
             System.out.println("Sorry!! InValid Input");
         }
     }
+    /**
+     *[5] Method to check the regex pattern for the password 
+     *Rule1- minimum 8 Characters
+     * 1 We are passing the mobile number to this method
+     * 2. Then we define the regex pattern
+     * @param password
+     */
+    public void password(String password) {
+        regex = "^[a-z]{8,}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(password);
+        if (matcher.matches()) {
+            System.out.println("Valid Input");
+        } else {
+            System.out.println("Sorry!! InValid Input");
+        }
+    }
 }
+
