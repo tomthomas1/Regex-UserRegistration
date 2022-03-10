@@ -20,4 +20,12 @@ public class RegexUserRegistration {
         String firstName = scanner.next();
         userDetails.firstName(firstName);
     }
+    /**
+     * We take the input and pass it to the method to check if the last name is valid
+     */
+    public void userLastName() {
+        System.out.println("Enter Your Last Name : ");
+        String lastName = scanner.next();
+        userDetails.lastName(lastName);
+    }
 }

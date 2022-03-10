@@ -11,16 +11,20 @@ public class RegexUserMain {
     Scanner scanner = new Scanner(System.in);
 
     /**
-     * We have put a while loop then the user closes the scanner.
+     * We have put a while loop to iterate the options.
      */
     public void choice() {
         while (true) {
-            System.out.println("Enter 1 To Check First Name\n"
-                             + "Enter 0 To Exit");
+            System.out.println(" \n1 To Check First Name\n"
+                    + "2 To Check Last Name\n"
+                    + "0 To Exit");
             int choice = scanner.nextInt();
             switch (choice) {
                 case 1 :
                     regexUserRegistration.userFirstName();
+                    break;
+                case 2 :
+                    regexUserRegistration.userLastName();
                     break;
                 case 0:
                     System.exit(0);
@@ -33,7 +37,7 @@ public class RegexUserMain {
     }
 
     public static void main(String[] args) {
-        System.out.println("\n------Welcome to the User Registration program by Regex------- \n");
+        System.out.println("\n Welcome to the User Registration program by Regex \n");
         RegexUserMain regexUserMain = new RegexUserMain();
         regexUserMain.choice();
         regexUserMain.scanner.close();
