@@ -36,4 +36,12 @@ public class RegexUserRegistration {
         String emailId = scanner.next();
         userDetails.emailId(emailId);
     }
+    /**
+     * We take the input and pass it to the method to check if the mobile number is valid
+     */
+    public void userMobileNumber() {
+        System.out.println("Enter your MobileNumber");
+        String mobileNumber = scanner.next();
+        userDetails.mobileNumber(mobileNumber);
+    }
 }
