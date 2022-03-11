@@ -10,6 +10,8 @@ import java.util.Scanner;
  */
 public class RegexUserMain {
 	RegexUserRegistration regexUserRegistration = new RegexUserRegistration();
+    TestSampleEmail testSampleEmail = new TestSampleEmail();
+
 	Scanner scanner = new Scanner(System.in);
 
 	/**
@@ -18,7 +20,8 @@ public class RegexUserMain {
 	public void choice() {
 		while (true) {
 			System.out.println(" \n1 To Check First Name\n" + "2 To Check Last Name\n" + "3 To Check EmailId\n"
-					+ "4 To Check Mobile Number\n" + "5 To Check Password\n" + "0 To Exit");
+					+ "4 To Check Mobile Number\n" + "5 To Check Password\n" + "6 To test the sample EmailIds\n"
+					+ "0 To Exit");
 			int choice = scanner.nextInt();
 			switch (choice) {
 			case 1:
@@ -36,6 +39,9 @@ public class RegexUserMain {
 			case 5:
 				regexUserRegistration.userPassword();
 				break;
+			case 6:
+				sampleEmailIds();
+				break;
 			case 0:
 				System.exit(0);
 				break;
@@ -44,6 +50,15 @@ public class RegexUserMain {
 				continue;
 			}
 		}
+	}
+
+	/**
+	 * Method to call the method of class test to check if email is valid or not
+	 */
+	public void sampleEmailIds() {
+			testSampleEmail.testForValidEmails();
+			testSampleEmail.testForNonValidEmails();
+		
 	}
 
 	public static void main(String[] args) {
