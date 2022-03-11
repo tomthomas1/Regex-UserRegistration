@@ -5,6 +5,10 @@ import java.util.regex.Pattern;
 /**
  * We have created this class to define the regex pattern and match it.
  *  [1]Method to check if firstName passes the regex.
+ *  [2]Method to check if lastName passes the regex.
+ *  [3]Method to check if email string passes the regex.
+ *  [4]Method to check if mobileNumber string passes the regex.
+ *  [5]Method to check if password string passes the regex pattern.
  * @author Tom
  *
  */
