@@ -93,12 +93,14 @@ public class UserDetails {
      *[5] Method to check the regex pattern for the password 
      *Rule1- minimum 8 Characters
      *Rule2 – Should have at least 1 Upper Case
+     *Rule3 – Should have at least 1 numeric number in the password
+     *Rule4 – Has exactly 1 Special Character
      * 1 We are passing the mobile number to this method
      * 2. Then we define the regex pattern
      * @param password
      */
     public void password(String password) {
-        regex = "^(?=.*[A-Z]).{8,}$";
+    	regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*#?&]{1})[A-Za-z\\d@$!%*?&]{8,}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(password);
         if (matcher.matches()) {
