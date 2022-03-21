@@ -13,6 +13,7 @@ import org.junit.Test;
  */
 public class UserRegistrationTest {
 	UserRegistration exceptionUserRegistration = new UserRegistration();
+ 
 
 	/**
 	 * In this test case we will pass the first name and use the assert method to check if the test result is true.
